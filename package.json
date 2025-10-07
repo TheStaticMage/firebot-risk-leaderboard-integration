@@ -1,0 +1,39 @@
+{
+    "name": "firebot-risk-leaderboard-integration",
+    "scriptOutputName": "firebot-risk-leaderboard-integration",
+    "version": "0.0.1",
+    "description": "Risk leaderboard integration.",
+    "main": "",
+    "scripts": {
+        "build": "npm run build:version && npm run build:webpack",
+        "build:dev": "npm run build:version && npm run build:webpack && npm run copy",
+        "build:version": "node ./scripts/update-version.js",
+        "build:webpack": "webpack",
+        "copy": "node ./scripts/copy-build.js",
+        "prepare": "",
+        "test": "jest --coverage",
+        "jest": "jest --coverage"
+    },
+    "author": "thestaticmage",
+    "license": "GNU3",
+    "devDependencies": {
+        "@crowbartools/firebot-custom-scripts-types": "github:TheStaticMage/firebot-custom-scripts-types#running",
+        "@eslint/js": "^9.28.0",
+        "@stylistic/eslint-plugin": "^4.4.1",
+        "@types/jest": "^30.0.0",
+        "@types/node-fetch": "^2.6.13",
+        "jest": "^30.0.4",
+        "node-html-parser": "^7.0.1",
+        "terser-webpack-plugin": "^5.3.10",
+        "ts-jest": "^29.4.0",
+        "ts-loader": "^9.5.1",
+        "typescript": "^5.3.3",
+        "typescript-eslint": "^8.33.1",
+        "webpack": "^5.89.0",
+        "webpack-cli": "^6.0.1"
+    },
+    "dependencies": {
+        "https-proxy-agent": "^7.0.6",
+        "node-fetch": "^2.7.0"
+    }
+}
